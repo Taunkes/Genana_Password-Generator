@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "Genana",
+    "description": "Extension to ",
+    "version": "1.0",
+
+    "action": {
+    "default_popup": "popup.html"
+  },
+
+    "icons": {
+      "16": "images/doggy16.png",
+      "32": "images/doggy16.png",
+      "48": "images/doggy16.png",
+      "128": "images/doggy16.png"
+    },
+
+    "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "content-script.js"
+      ]
+    }
+  ],
+    "permissions": [
+      "storage",
+      "scripting",
+      "tabs",
+      "activeTab"
+    ],
+    
+    "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  }
+}
+  
